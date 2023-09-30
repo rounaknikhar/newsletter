@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+// Variables
+// Colors
+
+// Primary
+$tomato: hsl(4, 100%, 67%);
+$orange : hsl(14.62deg 100% 61.37%);
+
+// Neutral
+$darkSlateGrey: hsl(234, 29%, 20%);
+$charcoalGrey: hsl(235, 18%, 26%);
+$grey: hsl(231, 7%, 60%);
+$white: hsl(0, 0%, 100%);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#app {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    color: $white;
+    background: $charcoalGrey;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+a {
+    text-align: center;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.card-container {
+    max-width: calc(1440px - 450px);
+    margin-top: calc(100vh - 85vh);
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $white;
+    color: $darkSlateGrey;
+    padding: 30px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    @media only screen and (max-width: 675px) {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        height: 100vh;
+        padding-top: 0;
+        margin-top: 0;
+        border-radius: 0;
+    }
+}
+
+.text-side {
+    margin-left: 30px;
+
+    @media only screen and (max-width: 675px) {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .action-button {
+        padding: 20px;
+        color: $white;
+        background-color: $darkSlateGrey;
+        border-radius: 5px;
+        transition: 0.2s all;
+
+        &:focus,
+        &:hover,
+        &:active {
+            background: $orange;
+            background-image: linear-gradient(to right, $tomato, $orange);
+            -webkit-box-shadow: 0px 15px 30px 2px rgba($orange, 0.7);
+            -moz-box-shadow: 0px 15px 30px 2px rgba($orange, 0.7);
+            box-shadow: 0px 15px 30px 2px rgba($orange, 0.7);
+        }
+    }
+
+    .tick-list {
+        margin: 30px 0;
+
+        .list {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            margin: 10px 0;
+
+            img {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .send-email {
+        transition: 0.2s all;
+
+        label {
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        input[type="email"] {
+            border: 1px solid $grey;
+            border-radius: 5px;
+            padding: 20px;
+            width: 100%;
+            margin-top: 8px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            transition: 0.2s all;
+
+            &::placeholder {
+                font-size: 16px;
+                font-weight: 400;
+                color: $grey;
+            }
+        }
+    }
+}
+
+.image-side {
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+    }
+
+    @media only screen and (max-width: 675px) {
+        .mobile {
+            display: block;
+        }
+
+        .desktop {
+            display: none;
+        }
+    }
+}
