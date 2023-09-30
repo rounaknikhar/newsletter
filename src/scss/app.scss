@@ -59,17 +59,16 @@ h1 {
         flex-direction: column-reverse;
         justify-content: flex-end;
         height: 100vh;
-        padding-top: 0;
+        padding: 0;
         margin-top: 0;
         border-radius: 0;
     }
 }
 
 .text-side {
-    margin-left: 30px;
+    margin: 0 30px;
 
     @media only screen and (max-width: 675px) {
-        margin-left: 0;
         margin-top: 20px;
     }
 
@@ -137,10 +136,14 @@ h1 {
 .image-side {
     .mobile {
         display: none;
+        width: 100%;
+        height: auto;
     }
 
     .desktop {
         display: block;
+        width: 100%;
+        height: auto;
     }
 
     @media only screen and (max-width: 675px) {
