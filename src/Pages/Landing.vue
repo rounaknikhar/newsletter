@@ -1,7 +1,7 @@
 <template>
   <section v-if="landing">
     <div class="landing-card-container">
-      <div class="text-side" role="content">
+      <div class="text-side">
         <h1>Stay updated!</h1>
         <p>
           Join 60,000+ product managers receiving monthly updates on:
@@ -9,15 +9,15 @@
         <div class="tick-list">
           <span class="list">
             <img src="../assets/icon-list.svg" alt="list">
-            <p>Product discovery abd building what matters</p>
+            <span>Product discovery abd building what matters</span>
           </span>
           <span class="list">
             <img src="../assets/icon-list.svg" alt="list">
-            <p>Product discovery abd building what matters</p>
+            <span>Product discovery abd building what matters</span>
           </span>
           <span class="list">
             <img src="../assets/icon-list.svg" alt="list">
-            <p>Product discovery abd building what matters</p>
+            <span>Product discovery abd building what matters</span>
           </span>
         </div>
 
@@ -33,9 +33,9 @@
           </a>
         </form>
       </div>
-      <div class="image-side" role="attachments">
-        <img class="desktop" src="../assets/illustration-sign-up-desktop.svg" alt="image" role="img">
-        <img class="mobile" src="../assets/illustration-sign-up-mobile.svg" alt="image" role="img">
+      <div class="image-side">
+        <img class="desktop" src="../assets/illustration-sign-up-desktop.svg" alt="image">
+        <img class="mobile" src="../assets/illustration-sign-up-mobile.svg" alt="image">
       </div>
     </div>
   </section>
