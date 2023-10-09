@@ -1,7 +1,7 @@
 <template>
   <section v-if="landing">
     <div class="landing-card-container">
-      <div class="text-side">
+      <div class="text-side" role="content">
         <h1>Stay updated!</h1>
         <p>
           Join 60,000+ product managers receiving monthly updates on:
@@ -33,9 +33,9 @@
           </a>
         </form>
       </div>
-      <div class="image-side">
-        <img class="desktop" src="../assets/illustration-sign-up-desktop.svg" alt="image">
-        <img class="mobile" src="../assets/illustration-sign-up-mobile.svg" alt="image">
+      <div class="image-side" role="attachments">
+        <img class="desktop" src="../assets/illustration-sign-up-desktop.svg" alt="image" role="img">
+        <img class="mobile" src="../assets/illustration-sign-up-mobile.svg" alt="image" role="img">
       </div>
     </div>
   </section>
