@@ -29,6 +29,11 @@ body {
     background: $charcoalGrey;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
+
+    @media only screen and (max-width: 675px) {
+        background-color: $white;
+        color: $charcoalGrey;
+    }
 }
 
 a {
@@ -41,7 +46,56 @@ h1 {
     margin-bottom: 20px;
 }
 
-.card-container {
+.success-card-container {
+    max-width: calc(1440px - 1050px);
+    margin-top: calc(100vh - 85vh);
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $white;
+    color: $darkSlateGrey;
+    padding: 50px;
+    border-radius: 16px;
+
+    @media only screen and (max-width: 675px) {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        height: 100vh;
+        padding: 0;
+        margin-top: 0;
+        border-radius: 0;
+    }
+    img {
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .action-button, button {
+        margin-top:20px;
+        padding: 20px;
+        color: $white;
+        background-color: $darkSlateGrey;
+        border-radius: 5px;
+        transition: 0.2s all;
+        border: none;
+        cursor: pointer;
+        &:focus,
+        &:hover,
+        &:active {
+            border: none;
+            background: $orange;
+            background-image: linear-gradient(to right, $tomato, $orange);
+            -webkit-box-shadow: 0px 15px 30px 2px rgba($orange, 0.7);
+            -moz-box-shadow: 0px 15px 30px 2px rgba($orange, 0.7);
+            box-shadow: 0px 15px 30px 2px rgba($orange, 0.7);
+        }
+    }
+}
+
+.landing-card-container {
     max-width: calc(1440px - 450px);
     margin-top: calc(100vh - 85vh);
     margin-left: auto;
@@ -72,16 +126,18 @@ h1 {
         margin-top: 20px;
     }
 
-    .action-button {
+    .action-button, button {
         padding: 20px;
         color: $white;
         background-color: $darkSlateGrey;
         border-radius: 5px;
         transition: 0.2s all;
-
+        border: none;
+        cursor: pointer;
         &:focus,
         &:hover,
         &:active {
+            border: none;
             background: $orange;
             background-image: linear-gradient(to right, $tomato, $orange);
             -webkit-box-shadow: 0px 15px 30px 2px rgba($orange, 0.7);
@@ -114,7 +170,24 @@ h1 {
             font-weight: 700;
         }
 
-        input[type="email"] {
+        .error-message {
+            font-size: 14px;
+            font-weight: 700;
+            color: $tomato;
+            float: right;
+        }
+
+        .input-error {
+            border-color: $tomato !important;
+            color: $tomato !important;
+            background-color: rgba($tomato, 0.1);
+
+            &::placeholder {
+                color: $tomato !important;
+            }
+        }
+
+        input[type="text"] {
             border: 1px solid $grey;
             border-radius: 5px;
             padding: 20px;
@@ -122,7 +195,6 @@ h1 {
             margin-top: 8px;
             margin-bottom: 20px;
             font-size: 16px;
-            transition: 0.2s all;
 
             &::placeholder {
                 font-size: 16px;
@@ -134,6 +206,7 @@ h1 {
 }
 
 .image-side {
+    min-width: 380px;
     .mobile {
         display: none;
         width: 100%;
