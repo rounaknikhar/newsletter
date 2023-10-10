@@ -54,7 +54,7 @@ h1 {
     background-color: $white;
     color: $darkSlateGrey;
     padding: 50px;
-    border-radius: 16px;
+    border-radius: 36px;
 
     @media only screen and (max-width: 675px) {
         flex-direction: column-reverse;
@@ -78,9 +78,10 @@ h1 {
         padding: 20px;
         color: $white;
         background-color: $darkSlateGrey;
-        border-radius: 5px;
+        border-radius: 10px;
         transition: 0.2s all;
         border: none;
+        font-weight: 600;
         cursor: pointer;
         &:focus,
         &:hover,
@@ -97,13 +98,13 @@ h1 {
 
 .landing-card-container {
     max-width: calc(1440px - 450px);
-    margin-top: calc(100vh - 85vh);
+    margin-top: calc(100vh - 80vh);
     margin-left: auto;
     margin-right: auto;
     background-color: $white;
     color: $darkSlateGrey;
     padding: 30px;
-    border-radius: 16px;
+    border-radius: 36px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -130,9 +131,10 @@ h1 {
         padding: 20px;
         color: $white;
         background-color: $darkSlateGrey;
-        border-radius: 5px;
+        border-radius: 10px;
         transition: 0.2s all;
         border: none;
+        font-weight: 600;
         cursor: pointer;
         &:focus,
         &:hover,
@@ -189,7 +191,7 @@ h1 {
 
         input[type="text"] {
             border: 1px solid $grey;
-            border-radius: 5px;
+            border-radius: 10px;
             padding: 20px;
             width: 100%;
             margin-top: 8px;
